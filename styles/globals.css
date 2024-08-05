@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.hero {
+  background-image: url('/path-to-your-background-image.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.cta button {
+  transition: background-color 0.3s ease;
+}
+
+.cta button:hover {
+  background-color: #004d40; /* Darker shade for hover effect */
+}
+
+
+/* globals.css */
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: #d1d5db;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 1rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #10b981;
+  top: 0.5rem;
+  left: 50%;
+  margin-left: -12px;
+}
+
+.right-timeline .timeline-item::before {
+  left: -12px;
+}
+
+.left-timeline .timeline-item::before {
+  right: -12px;
+}
